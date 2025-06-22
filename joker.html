@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>O Coringa: Mal e Irresponsável</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #e50914;
+    }
+    .tab {
+      overflow: hidden;
+      border-bottom: 1px solid #444;
+    }
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      color: #fff;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+    .tab button:hover {
+      background-color: #444;
+    }
+    .tab button.active {
+      background-color: #e50914;
+    }
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border-top: none;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>O Coringa: Mal e Irresponsável</h1>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Maldade')" id="defaultOpen">Maldade</button>
+  <button class="tablinks" onclick="openTab(event, 'Irresponsabilidade')">Irresponsabilidade</button>
+  <button class="tablinks" onclick="openTab(event, 'Imagens')">Imagens</button>
+</div>
+
+<div id="Maldade" class="tabcontent">
+  <h2>Maldade</h2>
+  <p>O Coringa é conhecido por seus atos cruéis e sem empatia. Ele mata sem remorso, tortura por diversão e espalha o caos apenas pelo prazer de ver o mundo queimar. Um de seus atos mais notórios foi o ataque brutal à Barbara Gordon.</p>
+</div>
+
+<div id="Irresponsabilidade" class="tabcontent">
+  <h2>Irresponsabilidade</h2>
+  <p>Além de cruel, o Coringa é completamente irresponsável. Ele ignora qualquer forma de consequência e vive apenas para perturbar a ordem. Seus planos muitas vezes não têm lógica, apenas destruição.</p>
+</div>
+
+<div id="Imagens" class="tabcontent">
+  <h2>Imagens do Coringa</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/en/e/e9/Joker_%28DC_Comics_character%29.jpg" alt="Coringa clássico">
+  <img src="https://i.imgur.com/Z9hH5tb.jpg" alt="Joaquin Phoenix como Coringa">
+</div>
+
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  // Abrir a aba padrão
+  document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
